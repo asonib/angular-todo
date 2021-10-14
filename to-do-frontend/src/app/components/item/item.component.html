@@ -1,0 +1,10 @@
+<div class="item">
+    <div class="">
+        <b>{{item.text}}</b>
+        <div>{{item.date}}</div>
+    </div>
+    <div>
+        <!-- <app-button text="Done" color="grey" class="item-option" (btnClick)="toggleClick(item)"></app-button> -->
+        <fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}" (click)="onDelete(item)"></fa-icon>
+    </div>
+</div>
