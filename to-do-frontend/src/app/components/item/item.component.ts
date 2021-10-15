@@ -11,6 +11,7 @@ export class ItemComponent implements OnInit {
 
   @Input() item!: Task;
   @Output() btnOnDelete: EventEmitter<Task> = new EventEmitter();
+  @Output() btnOnDone: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
@@ -20,5 +21,9 @@ export class ItemComponent implements OnInit {
 
   onDelete(task: Task){
     this.btnOnDelete.emit(task);
+  }
+
+  onClick(task: Task) {
+    this.btnOnDone.emit(task);
   }
 }
