@@ -26,12 +26,7 @@ export class ItemlistComponent implements OnInit {
 
   onDoneTask(task: Task){
     this.todoService.updateTask(task).subscribe(() => {
-      this.task.map((item, key) => {
-        if(item.id === task.id){
-          this.task[key] = item;
-        }
-      }
-    );
+      console.log(`Updated Task with id [${task.id}]`);
     })
   }
 

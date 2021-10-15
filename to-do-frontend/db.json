@@ -3,14 +3,23 @@
     {
       "id": 2,
       "text": "Memo 2",
-      "date": "10th July, 202",
-      "reminder": true
+      "date": "10th July, 2021",
+      "reminder": true,
+      "priority": "green"
     },
     {
       "id": 4,
       "text": "Memo 4",
-      "date": "10th July, 202",
-      "reminder": false
+      "date": "10th July, 2021",
+      "reminder": false,
+      "priority": "yellow"
+    },
+    {
+      "id": 1,
+      "text": "Memo 1",
+      "date": "10th July, 2021",
+      "reminder": true,
+      "priority": "red"
     }
   ]
 }
