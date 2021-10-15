@@ -25,13 +25,14 @@ export class ItemlistComponent implements OnInit {
   }
 
   onDoneTask(task: Task){
-    this.task.map((item, key) => {
-      if(item.id === task.id){
-        item.reminder = !item.reminder;
-        this.task[key] = item;
+    this.todoService.updateTask(task).subscribe(() => {
+      this.task.map((item, key) => {
+        if(item.id === task.id){
+          this.task[key] = item;
+        }
       }
-    }
-  );
+    );
+    })
   }
 
 }

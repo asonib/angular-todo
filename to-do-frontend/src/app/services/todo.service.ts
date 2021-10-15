@@ -20,4 +20,10 @@ export class TodoService {
     const deleteUri = `${this.baseUrl}/${task.id}`
     return this.http.delete<Task>(deleteUri);
   }
+
+  updateTask(task: Task): Observable<Task> {
+    const updateUri = `${this.baseUrl}/${task.id}`
+    task.reminder = !task.reminder;
+    return this.http.put<Task>(updateUri, task);
+  }
 }
