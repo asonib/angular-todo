@@ -1,4 +1,4 @@
-<div class="item">
+<div [ngClass]="{ reminder : item.reminder}" class="item" (dblclick)="onClick(item)">
     <div class="">
         <b>{{item.text}}</b>
         <div>{{item.date}}</div>
