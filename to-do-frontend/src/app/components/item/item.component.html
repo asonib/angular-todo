@@ -1,10 +1,14 @@
 <div [ngClass]="{ reminder : item.reminder}" class="item" (dblclick)="onClick(item)">
-    <div class="">
+    <div>
         <b>{{item.text}}</b>
-        <div>{{item.date}}</div>
+        <div class="item-features">
+            <div class="item-date">{{item.date}}</div>
+            <div [ngStyle]="{'background-color': item.priority}" class="item-priority" title="Task Priority"> </div>
+        </div>
     </div>
     <div>
         <!-- <app-button text="Done" color="grey" class="item-option" (btnClick)="toggleClick(item)"></app-button> -->
-        <fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}" (click)="onDelete(item)"></fa-icon>
+        <div *ngIf="item.reminder; else elseBlock"><fa-icon [icon]="faCheckCircle" [ngStyle]="{color: 'green'}"></fa-icon></div>
+        <ng-template #elseBlock><fa-icon [icon]="faTimes" [ngStyle]="{color: 'red'}" (click)="onDelete(item)"></fa-icon></ng-template>
     </div>
 </div>

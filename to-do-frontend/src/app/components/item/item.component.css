@@ -9,9 +9,29 @@
     margin: 10px;
     cursor: pointer;
 }
+.item-features{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
 .item.reminder{
     border-left: 5px solid green;
 }
+.item-date{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-right: 10px;
+    color: grey;
+}
 .item-option{
     margin-right: 10px;
+}
+.item-priority{
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
 }

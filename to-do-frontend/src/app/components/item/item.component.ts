@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import {Task} from 'src/app/models/task'
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-item',
@@ -13,6 +14,7 @@ export class ItemComponent implements OnInit {
   @Output() btnOnDelete: EventEmitter<Task> = new EventEmitter();
   @Output() btnOnDone: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
+  faCheckCircle = faCheckCircle;
 
   constructor() { }
 
